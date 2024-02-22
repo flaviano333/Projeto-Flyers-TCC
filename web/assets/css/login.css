@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('background.jpg'); /* Altere para a imagem de fundo desejada */
+    background-size: cover;
+    
+}
+
+.formulario-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo translúcido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.formulario {
+    background-color: rgba(0, 255, 255, 0.09);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    position: relative;
+    backdrop-filter: blur(6px);
+    border: 1px solid white;
+    width: 380px;
+    
+}
+
+.formulario h2 {
+    text-align: center;
+    color: white;
+}
+
+.formulario label, .formulario input {
+    display: block;
+    margin-bottom: 25px;
+    border-radius: 50px;
+    width: 80%;
+    color:white;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(20px);
+    border: 1px solid white;
+    height: 40px;
+    text-indent: 10px;
+}
+.formulario input:hover{
+    background-color: rgba(255, 255, 255, 0.6);
+}
+.formulario input::placeholder {
+    color: white; /* Defina a cor desejada para o placeholder */
+    text-indent: 10px;
+}
+.textoesquerda{
+    position:absolute;
+    top:183px;
+    left:58px;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+}
+.textoesquerda:hover{
+    text-decoration: underline;
+    font-weight: bold;
+}
+.textocentro{
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+}
+.textoa{
+    font-size: 16px;
+    color: #0000ff;
+}
+.textoa:hover{
+    font-weight: bold;
+    color: #4d4dff;
+}
+.botaofechar {
+    background-color: #ff471a;
+    color: white;
+    position: absolute;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    
+}
+.botaoentrar {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    width:80%;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.botaoentrar:hover {
+    background-color: #d9d9d9;
+}
+.botaofechar:hover {
+  color: #800000;
+  background-color: #ff0000;
+}
+.fechar-formulario {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px; /* Tamanho do ícone */
+    line-height: 1; /* Centralize o ícone verticalmente */
+    padding: 0;
+    width: 10px; /* Largura do botão */
+    height: 10px; /* Altura do botão */
+}
+
+.fechar-formulario:focus {
+    outline: none;
+}
+
+

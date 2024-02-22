@@ -1,0 +1,671 @@
+/* 
+    Created on : 22/10/2023, 14:34:53
+    Author     : Flávio
+*/
+:root{
+    --menu-size:250px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    outline: none;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #000033;
+ 
+}
+
+header {
+    background-color: rgb(21, 22, 29);
+    padding: 10px;
+    text-align: center;
+}
+
+.content {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+#btnMenu {
+    cursor: pointer;
+    padding: 5px;
+    transition: all 0.5s;
+    position: absolute;
+    right: 0.5%;
+    top: 1.18%;
+    
+}
+
+#btnMenu:hover {
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #4F4F4F;
+}
+#btnCarrinho {
+    cursor: pointer;
+    padding: 5px;
+    transition: all 0.5s;
+    position: absolute;
+    right: 0.5%;
+    margin-top: -25px;
+    
+}
+#btnCarrinho:hover {
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #4F4F4F;
+}
+#btnCarrinho:active {
+    background-color: rgb(3, 4, 7);
+}
+#btnMenu:active {
+    background-color: rgb(3, 4, 7);
+}
+#btnChat {
+    cursor: pointer;
+    padding: 5px;
+    transition: all 0.5s;
+    position: absolute;
+    right: 60px;
+    margin-top: -25px;
+    
+}
+#btnChat:hover {
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #4F4F4F;
+}
+#btnChat:active {
+    background-color: rgb(3, 4, 7);
+}
+#btnClose {
+    padding: 8px;
+    background-color: rgb(78, 37, 37);
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#btnClose:active {
+    background-color: rgb(151, 73, 73);
+}
+
+.menu {
+    position: fixed;
+    top: 0px;
+    width: 0;
+    height: 0;
+    border-radius: 0;
+    right: 0;
+
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li {
+    display: block;
+}
+
+.menu ul li a {
+    transition: background 0.3s;
+    display: block;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 15px;
+}
+#menuhorizontal {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    color: white;
+    text-align: center;
+}
+#menuhorizontal li {
+    list-style: none;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    background: linear-gradient(to top, #333, #4F4F4F);
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+}
+#menuhorizontal ul li a {
+    transition: background 0.3s;
+    display: block;
+    font-size: 14px;
+    color: white;
+    height: 25px;
+    list-style: none;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-right: 10px;
+    
+}
+#menuhorizontal li:hover {
+    background: linear-gradient(to top, #0066cc, #4F4F4F);
+    border-radius: 5px;
+    
+}
+.menu ul li a:hover {
+    background-color: rgb(49, 54, 85);
+}
+
+.effect {
+    transition: margin 0.4s;
+}
+
+@media (min-width: 768px) {
+    #btnClose {
+        display: none;
+    }
+}
+#btnMenu2 {
+    cursor: pointer;
+    padding: 5px;
+    z-index: 9999;
+    transition: all 0.5s;
+    position: absolute;
+    left: 0.4%;
+    margin-top: -25px;
+    
+}
+
+#btnMenu2:hover {
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #808080;
+}
+#btnLogo {
+    cursor: pointer;
+    border-radius: 6px;
+    top: 0.9%;
+    border: 1px solid #696969;  
+}
+
+#btnLogo:hover {
+    cursor: pointer;
+    box-shadow: 3px 5px 5px #696969;
+    border: 2px solid #808080;    
+}
+
+#btnMenu2:active {
+    background-color: rgb(3, 4, 7);
+}
+
+#btnClose2 {
+    padding: 8px;
+    background-color: rgb(78, 37, 37);
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#btnClose2:active {
+    background-color: rgb(151, 73, 73);
+}
+
+.menu2 {
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    display: none;
+    top: 0px;
+    width: var(--menu-size);
+    height: 100%;
+    background: linear-gradient(to top, #333, #4F4F4F);
+    border-radius: 5px;
+    margin-left: 0; /* O menu2 ficará à esquerda */
+    left: 0; /* Adicione essa propriedade para alinhar à esquerda */
+}
+
+.menu2 ul {
+    list-style: none;
+    
+}
+
+.menu2 ul li {
+    display: block;
+    background: linear-gradient(to top, #333, #4F4F4F);
+}
+
+#linha {
+    transition: background 0.3s;
+    display: block;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 15px;
+}
+#linha2 {
+    transition: background 0.3s;
+    display: block;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 15px;
+}
+#linha:hover {
+    background-color: #808080;
+}
+.effect2 {
+    transition: margin 0.4s;
+}
+
+@media (min-width: 768px) {
+    #btnClose2 {
+        display: none;
+    }
+}
+
+.banner {
+    background: linear-gradient(to top, #363636, #000000); /* Cor de fundo do banner */
+    color: #fff; /* Cor do texto */
+    padding: 5px; /* Espaçamento interno dentro do banner */
+    text-align: center; /* Alinhamento do texto no centro */
+    border-radius: 5px;
+    margin: 0px ;
+    height: 60px;
+    z-index: 9999;
+    margin-top: -1px ;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+    position: fixed;
+    width: 100%;
+}
+
+
+#FormLogin {
+    background: linear-gradient(to top, #A9A9A9,#DCDCDC);
+    padding: 1px;
+    border: 2px solid black;
+/* Ajuste essa propriedade para controlar a distância do topo *//* Ajuste essa propriedade para controlar a distância da direita */
+    border-radius: 5px;
+    width: 90%;
+    height: 11%;
+    transition: opacity 0.3s, visibility 0.3s;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9);
+}
+#TabelaMensagemPrincipal {
+
+    padding: 1px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background: linear-gradient(to top, #A9A9A9,white);
+    width: 60%;
+    height: 11%;
+    transition: opacity 0.3s, visibility 0.3s;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9);
+}
+.login-form {
+    display: none;
+}
+#TabelaCadastro {
+    background: linear-gradient(to top, #A9A9A9,#DCDCDC);
+    padding: 1px;
+    border: 2px solid black;
+    position: absolute;
+    right: 10px; /* Ajuste essa propriedade para controlar a distância da direita */
+    border-radius: 5px;
+    width: 90%;
+    height: 11%;
+    top:15%;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9);
+}
+
+#TabelaBemvindo {
+    background: linear-gradient(to top, #A9A9A9,#DCDCDC);
+    padding: 1px;
+    border: 2px solid black;
+    position: absolute;
+/* Ajuste essa propriedade para controlar a distância do topo */
+    right: 10px; /* Ajuste essa propriedade para controlar a distância da direita */
+    border-radius: 5px;
+    width: 90%;
+    height: 11%;
+    top:1%;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9);
+}
+#TabelaMeusdados {
+    background: linear-gradient(to top, #A9A9A9,#DCDCDC);
+    padding: 1px;
+    border: 2px solid black;
+    position: absolute;
+/* Ajuste essa propriedade para controlar a distância do topo */
+    right: 10px; /* Ajuste essa propriedade para controlar a distância da direita */
+    border-radius: 5px;
+    width: 90%;
+    height: 11%;
+    top:13%;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9);
+}
+#TabelaBodyPrincipal {
+    background:#DCDCDC;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 92%;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9);
+}
+#FichaCadastro {
+    background-color: whitesmoke;
+    padding: 1px;
+    border: 2px solid black;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Ajuste essa propriedade para controlar a distância da direita */
+    border-radius: 5px;
+    top:17%;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9);
+}
+#FichaCadastro input{
+    border-radius: 5px;
+    margin: 4px ;
+    padding:5px;
+    font-size:16px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+#FichaCadastro td {
+    border: 1px solid #ddd;
+    padding:1px;
+    border-radius:5px;
+}
+/* Estilize os campos do formulário conforme necessário */
+#FormLogin input {
+    margin: -1px ;
+    padding: 0px;
+    width: 40%;
+    
+}
+.FormLogin-dialog-close {
+  color: #aaa;
+  position: absolute;
+  border-radius: 5px;
+  font-size: 28px;
+  top:95px;
+  right:20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.FormLogin-dialog-close:hover{
+    color: red;
+}
+.FormLogin-dialog-close:focus {
+  color: black;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Estilize o botão de envio do formulário conforme necessário */
+#FormLogin input[type="submit"] {
+    background: linear-gradient(to top, #0000CD,#87CEFA);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    width: 18%; /* Defina a largura desejada */
+    height: 22px; /* Defina a altura desejada */    
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-bottom: 4px;    
+}
+#FormLogin input[type="submit"]:hover {
+    background: linear-gradient(to top, #00FFFF,#00BFFF);
+  
+}
+#FormLogin label {
+    margin-top: 10px;
+}
+.link-no-underline {
+    text-decoration: none;
+    color: black; /* Cor padrão */
+}
+
+.link-no-underline:hover {
+    color: white; /* Cor ao passar o mouse */
+}
+.link-no-underline1 {
+    text-decoration: none;
+    color: black; /* Cor padrão */
+}
+
+.link-no-underline1:hover {
+    color: red; /* Cor ao passar o mouse */
+}
+/* Estilo para ocultar a caixa de diálogo inicialmente */
+.password-dialog {
+  display: none;
+  border-radius: 5px;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9);
+}
+
+.password-dialog-content {
+  background-color: #f4f4f4;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 300px;
+  border-radius: 5px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.password-dialog h2 {
+  text-align: center;
+}
+
+.password-dialog input[type="password"] {
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.password-dialog button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  background: linear-gradient(to top, #0000CD, #87CEFA);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.password-dialog button:hover {
+  background: linear-gradient(to top, #8B0000, red);
+
+}
+
+/* Estilo para o botão "Fechar" (X) */
+.password-dialog-close {
+  color: #aaa;
+  float: right;
+  border-radius: 5px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.password-dialog-close:hover{
+    color: red;
+}
+.password-dialog-close:focus {
+  color: black;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+#TabelasFlyers {
+    background-color: whitesmoke;
+    padding: 1px;
+    border: 2px solid black;
+    width: 56%;
+    border-radius: 5px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9);
+    overflow-y: auto; 
+}
+.estilo-botao-verde {
+    background-color: #4CAF50;
+    color: white;
+    margin-top: 5px;
+    padding: 8px 18px;
+    border: none;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="file"] {
+    padding: 6px;
+    font-size: 10px;
+    border: 1px solid black;
+    border-radius: 25px;
+    background-color: #b3d1ff;
+    cursor: pointer;
+   
+}
+
+.estilo-botao-verde:hover{
+    background-color: #009900;
+}
+select {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Estilizando as opções dentro do select */
+option {
+    font-size: 16px;
+}
+.estilo-botao-azul {
+    background-color: #33bbff;
+    color: white;
+    margin-top: 5px;
+    padding: 8px 18px;
+    border: none;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.estilo-botao-azul:hover{
+    background-color: #0088cc;
+}
+.estilo-botao-vermelho {
+    background-color: #ff471a;
+    color: white;
+    margin-top: 5px;
+    padding: 10px 20px;
+    border: none;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.estilo-botao-vermelho:hover{
+    background-color:  #e62e00;
+}
+#TabelasRelatoriovendas {
+    background-color: whitesmoke;
+    padding: 4px;
+    border: 2px solid black;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9);
+    overflow-y: auto; 
+}
+#TabelasTd {
+    background-color: whitesmoke;
+    padding: 4px;
+    border: 1px solid white;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9);
+    overflow-y: auto; 
+}
+#TabelasTd img {
+    max-width: 100%; /* As imagens não excederão a largura da célula da tabela */
+    height: auto; /* A altura é ajustada automaticamente para manter a proporção */
+}
+#TabelasTd{
+    word-wrap: break-word;
+    white-space: normal;
+    border-spacing: 20px;
+
+}
+#TabelasCompra {
+    background-color: whitesmoke;
+    padding: 1px;
+    border: 2px solid black;
+    width: 50%;
+    border-radius: 5px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9);
+    overflow-y: auto; 
+}
+#TabelasCompra img {
+    max-width: 100%; /* As imagens não excederão a largura da célula da tabela */
+    height: auto; /* A altura é ajustada automaticamente para manter a proporção */
+}
+#TabelasCompra{
+    word-wrap: break-word;
+    white-space: normal;
+    border-spacing: 20px;
+
+}
+#TabelasConversa {
+    background-color: whitesmoke;
+    padding: 1px;
+    border: 2px solid black;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9);
+    overflow-y: auto; 
+}
+#TabelasConversa img {
+    max-width: 100%; /* As imagens não excederão a largura da célula da tabela */
+    height: auto; /* A altura é ajustada automaticamente para manter a proporção */
+}
+#TabelasConversa{
+    word-wrap: break-word;
+    white-space: normal;
+    border-spacing: 20px;
+
+}
+#TabelasFlyers img {
+    max-width: 100%; /* As imagens não excederão a largura da célula da tabela */
+    height: auto; /* A altura é ajustada automaticamente para manter a proporção */
+}
+#TabelasFlyers{
+    word-wrap: break-word;
+    white-space: normal;
+    border-spacing: 20px;
+
+}
+#conteudo-centralizado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+/* Isso ajuda a centralizar verticalmente em toda a altura da janela */
+}
